@@ -1,0 +1,23 @@
+<%- include('../partials/html-head')  %> 
+<link rel="stylesheet" href="/stylesheets/flights/new.css">
+<%- include('../partials/nav')  %> 
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/movies" method="post">
+    <label for="title-input">Airline:</label>
+    <input type="text" name="airline" id="title-input">
+    <label for="release-year-input">Airport:</label>
+    <input type="text" name="airport" id="release-year-input">
+    <label for="mpaa-rating-select">Flight Number:</label>
+    <select name="flightNo" id="mpaa-rating-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <label for="cast-input">Departure Date:</label>
+    <input type="text" name="departs" id="cast-input">
+    <button type="submit">Add Flight</button>
+  </form>
+</main>
+<%- include('../partials/footer')  %> 

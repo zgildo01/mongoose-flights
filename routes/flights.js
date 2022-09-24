@@ -5,6 +5,8 @@ const router = Router()
 
 //GET /flights/index
 router.get('/index', flightsCtrl.index)
+//GET /flights/new
+router.get('/new', flightsCtrl.new)
 
 export {
   router
