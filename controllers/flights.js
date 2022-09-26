@@ -31,7 +31,7 @@ function create(req, res) {
   Flight.create(req.body)
   .then(flight => {
     console.log(flight)
-    res.redirect('/flights')
+    res.redirect('/flights/index')
   })
   .catch(error => {
     console.log(error)
