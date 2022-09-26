@@ -7,8 +7,12 @@ const router = Router()
 router.get('/index', flightsCtrl.index)
 //GET /flights/new
 router.get('/new', flightsCtrl.new)
-//POST /flights
+//GET /flights/:id
+router.get('/:id', flightsCtrl.show)
+//POST /flights/:id
 router.post('/', flightsCtrl.create)
+//DELETE /flights/index
+router.delete('/:id', flightsCtrl.delete)
 
 export {
   router
