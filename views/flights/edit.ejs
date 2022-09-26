@@ -1,0 +1,19 @@
+<%- include('../partials/html-head')  %> 
+<link rel="stylesheet" href="/stylesheets/flights/edit.css">
+<%- include('../partials/nav')  %> 
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/flights/<%= flight._id %>?_method=PUT" method="post">
+    <label for="title-input">Airline:</label>
+    <input type="text" name="airline" id="title-input" 
+    value="<%= flight.airline %>">
+    <label for="release-year-input">Airport:</label>
+    <input type="text" name="airport" id="release-year-input" value="<%=flight.airport %>">
+    <label for="mpaa-rating-select">Flight Number:</label>
+    <input type="text" name="flightNo" id="mpaa-rating-select" value="<%=flight.flightNo %>">
+    <label for="cast-input">Departure Date:</label>
+    <input type="datetime-local" name="departs" id="cast-input" value="<%= flight.departs %>">
+    <button type="submit">Add Flight</button>
+  </form>
+</main>
+<%- include('../partials/footer')  %> 
