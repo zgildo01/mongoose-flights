@@ -55,8 +55,13 @@ function show(req, res) {
   Flight.findById(req.params.id)
   .then(flight => {
     res.render('flights/show', {
-      title: 'Airline #<%= flight._id %>'
+      title: 'Flight Details',
+      flight: flight
     })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
   })
 }
 
