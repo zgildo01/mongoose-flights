@@ -19,7 +19,7 @@
     <div>Departing Date: </div>
     <div><%= flight.departs %></div>
   </section>
-  <form id="add-per-to-cast" action="/flights/<% flight._id %>/meals" method="POST">
+  <form id="add-per-to-cast" action="/flights/<%= flight._id %>/meals" method="POST">
     <select name="mealId">
       <% meals.forEach(meal => { %>
         <option value="<%= meal._id %>"><%= meal.name %></option>
