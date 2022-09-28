@@ -43,7 +43,7 @@
     <tbody>
       <% let total = 0 %>
       <% flight.tickets.forEach(ticket => { %>
-        <% total += flight.ticket %> 
+        <% total += ticket.price %> 
         <tr>
           <td><%= ticket.createdAt.toLocaleDateString() %></td>
           <td><%= ticket.seat %></td>
